@@ -1,0 +1,202 @@
+.header{
+
+    &_block {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3.75rem;
+        @media (max-width:1080px) {
+            justify-content: center;
+        }
+    }
+
+    &_container {
+        display: flex;
+        align-items: center;
+    }
+
+    &_img_block {
+        display: flex;
+    }
+
+    &_star {
+        background-image: url('./img/light/light_star.png');
+        width: 10rem;
+        height: 10rem;
+        @media (max-width:1280px) {
+            background-size: cover;
+            width: 7rem;
+            height: 7rem;
+        }
+        @media (max-width:1180px) {
+            background-size: cover;
+            width: 5rem;
+            height: 5rem;
+        }
+        @media (max-width:1080px) {
+            display: none;
+        }
+        @media (prefers-color-scheme: dark) {
+            background-image: url('./img/dark/dark_star.png');
+        }
+    }
+
+    &_block_star {
+        display: flex;
+    }
+
+    &_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding-bottom: 4.38rem;
+    }
+
+
+    &_h1 {
+        font-family: $font;
+        font-size: 12.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%;
+        letter-spacing: -0.375rem;
+        width: 41.25rem;
+        @media (max-width:730px) {
+            font-size: 6.875rem;
+            width: 22.4375rem;
+            text-align: center;
+            letter-spacing: -0.20625rem;
+        }
+        @media (max-width: 390px) {
+            font-size: 5rem;
+            letter-spacing: -0.1rem;
+            width: 18.6rem;
+        }    
+
+    }
+
+    &_h2 {
+        padding-top: 1.12rem;
+        font-family: $font;
+        font-size: 7.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%;
+        letter-spacing: -0.21375rem;
+        background: var(--Red_Orange, linear-gradient(90deg, #FA709A 0%, #FEE140 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media (max-width:730px) {
+            font-size: 4rem;
+            text-align: center;
+            letter-spacing: -0.12rem;
+        }
+        @media (max-width: 390px) {
+            font-size: 3rem;
+            letter-spacing: -0.1rem;
+        } 
+    }
+
+    &_social_links {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2.5rem;
+    }
+
+    &_soc_link {
+        display: flex;
+        background-repeat: no-repeat;
+        padding: 0.375rem;
+        height: 3.25rem;
+        width: 3.25rem;
+        border-radius: 0.625rem;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: 2.5rem 2.5rem;
+        border: 1px solid var(--linksboreder);
+        @media (max-width: 390px) {
+            height: 2.9rem;
+            width: 2.9rem;
+        }
+        &_1 {
+            background-image: url('./img/light/light_insta.png');
+
+            @media (prefers-color-scheme: dark) {
+                background-image: url('./img/dark/dark_insta.png');
+            }
+        }
+
+        &_2 {
+            background-image: url('./img/light/light_figma.png');
+
+            @media (prefers-color-scheme: dark) {
+                background-image: url('./img/dark/dark_figma.png');
+            }
+        }
+
+        &_3 {
+            background-image: url('./img/light/light_linkedin.png');
+
+            @media (prefers-color-scheme: dark) {
+                background-image: url('./img/dark/dark_linkedin.png');
+            }
+        }
+
+        &_4 {
+            background-image: url('./img/light/light_twitter.png');
+
+            @media (prefers-color-scheme: dark) {
+                background-image: url('./img/dark/dark_twitter.png');
+            }
+        }
+
+        &_5 {
+            background-image: url('./img/light/light_telegram.png');
+
+            @media (prefers-color-scheme: dark) {
+                background-image: url('./img/dark/dark_telegram.png');
+            }
+        }
+
+        &_6 {
+            background-image: url('./img/light/light_medium.png');
+
+            @media (prefers-color-scheme: dark) {
+                background-image: url('./img/dark/dark_medium.png');
+            }
+        }
+
+    }
+    &_soc_button {
+        padding: 1rem 1.5rem 1rem 2rem; 
+        background: var(--main-colors-gray-4, #292929);
+        font-size: 1.25rem;
+        width: 100%;
+        color: var(--White, #FFF);
+        font-style: $font2;
+        font-weight: 400;
+        line-height: 100%; /* 1.25rem */
+        letter-spacing: -0.0625rem;
+        border: none;
+        &::after {
+            content: url('./img/light/light_arrow-down.png'); 
+            margin-left: 0.5rem; 
+            position: relative;
+            top: 3px;
+        }
+    }
+    &_img {
+        width: 43.375rem;
+        height: 48.625rem;
+        background-image: url('./img/vintage-collage.png');
+        background-color: lightgray;
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (max-width:1080px) {
+            display: none;
+        }
+    }
+
+}

@@ -1,0 +1,208 @@
+.nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0rem;
+    @media (max-width: 730px) {
+        padding: 3.125rem 1.375rem 1.875rem 1.375rem;
+    }
+
+    &_button {
+        padding: 0.75rem 1.5rem;
+        color: #fff;
+        font-family: $font2;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 1rem */
+        letter-spacing: -0.05rem;
+        text-transform: capitalize;
+        border-radius: 0.25rem;
+        border: none;
+        background: var(--main-colors-gray-4, #292929);
+        @media (prefers-color-scheme: dark) {
+            background: var(--main-colors-purple-5, #925FF0)
+        }
+        @media (max-width: 730px) {
+            display: none;
+        }
+
+        &_2 {
+            display: none;
+            padding: 0.75rem 1.5rem;
+            color: #fff;
+            font-family: $font2;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%; /* 1rem */
+            letter-spacing: -0.05rem;
+            text-transform: capitalize;
+            border-radius: 0.25rem;
+            border: none;
+            background: var(--main-colors-gray-4, #292929);
+            @media (prefers-color-scheme: dark) {
+                background: var(--main-colors-purple-5, #925FF0)
+            }
+            @media (max-width: 730px) {
+                display: block;
+            }
+        }
+
+    }
+
+    &_logo {
+        background-image: url('./img/light/light_logo.png');
+        width: 4.5625rem;
+        height: 1.6875rem;
+        background-size: cover;
+        @media (prefers-color-scheme: dark) {
+            background-image: url('./img/dark/dark_logo.png');
+        }
+        
+    }
+
+    &_link {
+        display: block;
+        font-family: $font2;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 1.25rem */
+        letter-spacing: -0.0625rem;
+        color: var(--color);
+    }
+
+    &__burger{
+        display: none;
+        width: 32px;
+        height: 32px;
+    }
+
+  }
+
+.burger {
+    display: none;
+    @media (max-width: 730px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.nav_burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.box {
+    display: none;
+}
+
+.burger_span {
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: var(--color);
+    border: none;
+    border-radius: 10px;
+}
+
+.nav_burger_label_block {
+    display: none;
+    @media (max-width:730px) {
+        display: flex;
+    }
+}
+
+.burger_label {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    left: 24px;
+}
+
+.burger_bottom {
+    margin-bottom: 6px;
+}
+
+.nav_link {
+    @media (max-width:730px) {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem; 
+        padding-bottom: 1.88rem;
+    }
+}
+
+.nav_link:hover{
+    @media (max-width:730px) {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem; 
+        padding-bottom: 1.88rem;
+    }
+}
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(0, -2%, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; visibility: visible;}
+    to {opacity: 1; visibility: visible;}
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 1.88rem;
+    @media (max-width:730px) {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 27.125rem;
+        background: rgba(27, 27, 27, 0.685);
+        backdrop-filter: blur(1px); 
+        top: 100%;
+        width: 100%;
+        left: -1px;
+        flex-direction: column;
+    }
+}
+
+.navbar__link__first{
+    @media (max-width:730px) {
+    padding-top: 2.25rem;
+    }
+}
+
+#myCheckbox:not(:checked) ~ .nav_menu {
+    @media (max-width:730px) {
+        animation: fadeOutUp 0.3s ease-in-out forwards;
+    }
+}
+
+#myCheckbox:checked ~ .nav_menu {
+    @media (max-width:730px) {
+        animation: fadeIn 1s ease-in-out;
+    }
+}
+
+
+
+
